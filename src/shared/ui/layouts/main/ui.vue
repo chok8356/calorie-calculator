@@ -16,7 +16,7 @@
 
 <style lang="scss" module>
 $sidebar-width: 24rem;
-$sidebar-margin: 4rem;
+$sidebar-margin: 3rem;
 $content-width: calc(100% - $sidebar-width - $sidebar-margin);
 
 .root {

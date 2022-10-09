@@ -56,7 +56,7 @@ $aside-width: 4rem + $aside-scroll-padding;
 }
 
 .main {
-  padding-left: calc($aside-width - $aside-scroll-padding + 4rem);
+  padding-left: calc($aside-width - $aside-scroll-padding + 3rem);
   width: 100%;
 }
 
