@@ -126,6 +126,7 @@ const opened = ref(false);
   color: var(--color-grey-50);
   font-size: 0.8rem;
   margin: 0 0 1rem;
+  white-space: pre-wrap;
 }
 
 @media screen and (max-width: 768px) {

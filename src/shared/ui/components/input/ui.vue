@@ -47,10 +47,9 @@ const updateValue = (e: Event) => {
   color: var(--color-grey-100);
   font-family: inherit;
   font-size: 1rem;
-  line-height: 0;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  padding: 0 0.75rem;
+  padding: 0.75rem;
   transition: outline 100ms ease-in;
   width: 100%;
 

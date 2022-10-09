@@ -13,7 +13,9 @@
       <Input v-model:value="product.name" />
 
       <label> Description </label>
-      <Input v-model:value="product.description" />
+      <Textarea
+        v-model:value="product.description"
+        rows="3" />
 
       <template
         v-for="(_, key) in product?.nutritionFacts || {}"
@@ -40,7 +42,7 @@ import { computed, onBeforeUnmount } from 'vue';
 import type { Product } from '@/shared/api';
 import { productLib, productModel } from '@/entities/product';
 import { CreateProduct } from '@/features/create-product';
-import { Button, Input, InputNumber } from '@/shared/ui/components';
+import { Button, Input, InputNumber, Textarea } from '@/shared/ui/components';
 import { UpdateProduct } from '@/widgets/update-product';
 
 const productStore = productModel.use();

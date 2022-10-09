@@ -38,7 +38,6 @@ withDefaults(
   font-weight: 500;
   height: 2.5rem;
   justify-content: center;
-  line-height: 0;
   outline: none;
   padding: 0 1.25rem;
   transition: background-color 100ms ease-in;

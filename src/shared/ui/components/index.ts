@@ -5,3 +5,4 @@ export * from './input-file';
 export * from './input-number';
 export * from './loader';
 export * from './select';
+export * from './textarea';
