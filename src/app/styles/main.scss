@@ -1,0 +1,82 @@
+//@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body {
+  background-color: var(--color-grey-5);
+  color: var(--color-grey-100);
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizelegibility;
+  width: 100%;
+}
+
+h1  {
+  font-size: 2rem;
+}
+
+h2  {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
+
+a {
+  color: var(--color-primary-50);
+  text-decoration: none;
+}
+
+#app {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.scrollbar {
+  scrollbar-color: var(--color-grey-15) transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-15);
+    border-radius: 4px;
+
+    &:hover {
+      background-color: var(--color-grey-20);
+    }
+  }
+}

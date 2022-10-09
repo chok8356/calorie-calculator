@@ -1,0 +1,36 @@
+$color-grey-h: 0deg;
+$color-grey-s: 0%;
+
+$color-primary-h: 99deg;
+$color-primary-s: 40%;
+
+@function getColorLight($i, $multiplier: 5%) {
+  @return 100 - $i * $multiplier
+}
+
+@mixin light-theme {
+  @for $i from 0 through 20 {
+    --color-grey-#{$i * 5}: hsl(#{$color-grey-h} #{$color-grey-s} #{getColorLight($i)});
+    --color-primary-#{$i * 5}: hsl(#{$color-primary-h} #{$color-primary-s} #{getColorLight($i)});
+  }
+}
+
+@mixin dark-theme {
+  @for $i from 0 through 20 {
+    --color-grey-#{100 - $i * 5}: hsl(#{$color-grey-h} #{$color-grey-s} #{getColorLight($i, 4.5%)});
+    --color-primary-#{100 - $i * 5}: hsl(#{$color-primary-h} #{$color-primary-s} #{getColorLight($i, 6%)});
+  }
+}
+
+:root {
+  --shadow: rgb(0 0 0 / 8%) 0 4px 6px -1px, rgb(0 0 0 / 4%) 0 2px 4px -1px;
+  --shadow-aside: rgb(0 0 0 / 2%) 0 -4px 6px -1px, rgb(0 0 0 / 1%) 0 -2px 4px -1px;
+  --color-white: hsl(0deg 0% 100%);
+  --color-black: hsl(0deg 0% 0%);
+  @include light-theme;
+}
+
+
+[data-theme="dark"] {
+  @include dark-theme;
+}

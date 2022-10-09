@@ -1,0 +1,9 @@
+export { default as IconAngleDown } from './AngleDown.vue';
+export { default as IconBurgerSoda } from './BurgerSoda.vue';
+export { default as IconCheck } from './Check.vue';
+export { default as IconClipboardList } from './ClipboardList.vue';
+export { default as IconCogs } from './Cogs.vue';
+export { default as IconEclipseAlt } from './EclipseAlt.vue';
+export { default as IconGithub } from './Github.vue';
+export { default as IconPen } from './Pen.vue';
+export { default as IconTrash } from './Trash.vue';
