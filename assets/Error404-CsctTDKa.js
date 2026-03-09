@@ -1,0 +1,1 @@
+import{o as n,e as s}from"./index-ClDMF1-_.js";const _=(r,o)=>{const e=r.__vccOpts||r;for(const[t,c]of o)e[t]=c;return e},a={},f={class:"error404"};function l(r,o){return n(),s("div",f,"Error404")}const i=_(a,[["render",l]]);export{i as default};
