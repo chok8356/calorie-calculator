@@ -1,0 +1,10 @@
+.sb-show-main.sb-main-padded {
+  width: auto;
+  display: inline-flex;
+  min-width: 340px;
+  padding: 0;
+
+  #storybook-root {
+    width: 100%;
+  }
+}

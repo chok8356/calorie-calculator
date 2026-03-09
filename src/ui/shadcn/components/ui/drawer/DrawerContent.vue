@@ -1,0 +1,46 @@
+<template>
+  <DrawerPortal to="#drawer-root">
+    <DrawerOverlay />
+    <DrawerContent
+      v-bind="{ ...$attrs, ...forwarded }"
+      :class="
+        cn(
+          'group/drawer-content bg-background absolute z-50 flex h-auto flex-col',
+          'data-[vaul-drawer-direction=top]:inset-x-0 data-[vaul-drawer-direction=top]:top-0 data-[vaul-drawer-direction=top]:mb-24 data-[vaul-drawer-direction=top]:max-h-9/10 data-[vaul-drawer-direction=top]:rounded-b-lg',
+          'data-[vaul-drawer-direction=bottom]:inset-x-0 data-[vaul-drawer-direction=bottom]:bottom-0 data-[vaul-drawer-direction=bottom]:mt-24 data-[vaul-drawer-direction=bottom]:max-h-9/10 data-[vaul-drawer-direction=bottom]:rounded-t-lg',
+          'data-[vaul-drawer-direction=right]:inset-y-0 data-[vaul-drawer-direction=right]:right-0 data-[vaul-drawer-direction=right]:w-3/4 data-[vaul-drawer-direction=right]:sm:max-w-sm',
+          'data-[vaul-drawer-direction=left]:inset-y-0 data-[vaul-drawer-direction=left]:left-0 data-[vaul-drawer-direction=left]:w-3/4 data-[vaul-drawer-direction=left]:sm:max-w-sm',
+          props.class,
+        )
+      "
+      data-slot="drawer-content">
+      <div
+        class="bg-muted mx-auto mt-4 hidden h-1.5 w-16 shrink-0 rounded-full group-data-[vaul-drawer-direction=bottom]/drawer-content:block" />
+      <slot />
+    </DrawerContent>
+  </DrawerPortal>
+</template>
+
+<script lang="ts" setup>
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
+
+import { useForwardPropsEmits } from 'reka-ui'
+import { DrawerContent, DrawerPortal } from 'vaul-vue'
+
+import { cn } from '@/ui/shadcn/lib/utils'
+
+import DrawerOverlay from './DrawerOverlay.vue'
+
+const props = defineProps<
+  DialogContentProps & { class?: HTMLAttributes['class'] }
+>()
+
+const emits = defineEmits<DialogContentEmits>()
+
+defineOptions({
+  inheritAttrs: false,
+})
+
+const forwarded = useForwardPropsEmits(props, emits)
+</script>

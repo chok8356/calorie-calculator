@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "arrowParens": "always",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "printWidth": 80,
+  "proseWrap": "always",
+  "semi": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}
